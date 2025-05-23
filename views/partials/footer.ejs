@@ -1,0 +1,168 @@
+</div>
+</div>
+
+<!-- Floating Action Button for Mobile -->
+<button class="fab" id="mobileFab">
+    <i class="fas fa-bars"></i>
+</button>
+
+<!-- Add Appointment Modal -->
+<div class="modal" id="appointmentModal">
+    <div class="modal-content">
+        <div class="modal-header">
+            <h3 class="modal-title">Add New Appointment</h3>
+            <button class="modal-close">&times;</button>
+        </div>
+        <form id="appointmentForm">
+            <div class="form-group">
+                <label class="form-label">Patient</label>
+                <select class="form-control" required>
+                    <option value="">Select Patient</option>
+                    <option value="1">Simba (Dog) - John Mwangi</option>
+                    <option value="2">Whiskers (Cat) - Mary Atieno</option>
+                    <option value="3">Rex (Dog) - Peter Omondi</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label class="form-label">Date & Time</label>
+                <input type="datetime-local" class="form-control" required>
+            </div>
+            <div class="form-group">
+                <label class="form-label">Reason</label>
+                <input type="text" class="form-control" placeholder="e.g. Vaccination, Check-up" required>
+            </div>
+            <div class="form-group">
+                <label class="form-label">Notes</label>
+                <textarea class="form-control" rows="3"></textarea>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn modal-close">Cancel</button>
+                <button type="submit" class="btn btn-primary">Save Appointment</button>
+            </div>
+        </form>
+    </div>
+</div>
+
+<!-- Add Payment Modal -->
+<div class="modal" id="paymentModal">
+    <div class="modal-content">
+        <div class="modal-header">
+            <h3 class="modal-title">Record Payment</h3>
+            <button class="modal-close">&times;</button>
+        </div>
+        <form id="paymentForm">
+            <div class="form-group">
+                <label class="form-label">Patient</label>
+                <select class="form-control" required>
+                    <option value="">Select Patient</option>
+                    <option value="1">Simba (Dog) - John Mwangi</option>
+                    <option value="2">Whiskers (Cat) - Mary Atieno</option>
+                    <option value="3">Rex (Dog) - Peter Omondi</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label class="form-label">Amount (KSh)</label>
+                <input type="number" class="form-control" placeholder="e.g. 2500" required>
+            </div>
+            <div class="form-group">
+                <label class="form-label">Payment Method</label>
+                <select class="form-control" required>
+                    <option value="mpesa">M-Pesa</option>
+                    <option value="cash">Cash</option>
+                    <option value="card">Credit/Debit Card</option>
+                    <option value="bank">Bank Transfer</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label class="form-label">Service</label>
+                <input type="text" class="form-control" placeholder="e.g. Vaccination, Surgery" required>
+            </div>
+            <div class="form-group">
+                <label class="form-label">Date</label>
+                <input type="date" class="form-control" required>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn modal-close">Cancel</button>
+                <button type="submit" class="btn btn-primary">Record Payment</button>
+            </div>
+        </form>
+    </div>
+</div>
+
+<!-- Add Debt Modal -->
+<div class="modal" id="debtModal">
+    <div class="modal-content">
+        <div class="modal-header">
+            <h3 class="modal-title">Add Debt Record</h3>
+            <button class="modal-close">&times;</button>
+        </div>
+        <form id="debtForm">
+            <div class="form-group">
+                <label class="form-label">Patient</label>
+                <select class="form-control" required>
+                    <option value="">Select Patient</option>
+                    <option value="1">Simba (Dog) - John Mwangi</option>
+                    <option value="2">Whiskers (Cat) - Mary Atieno</option>
+                    <option value="3">Rex (Dog) - Peter Omondi</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label class="form-label">Amount Owed (KSh)</label>
+                <input type="number" class="form-control" placeholder="e.g. 5000" required>
+            </div>
+            <div class="form-group">
+                <label class="form-label">Reason</label>
+                <input type="text" class="form-control" placeholder="e.g. Surgery, Treatment" required>
+            </div>
+            <div class="form-group">
+                <label class="form-label">Due Date</label>
+                <input type="date" class="form-control" required>
+            </div>
+            <div class="form-group">
+                <label class="form-label">Notes</label>
+                <textarea class="form-control" rows="3"></textarea>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn modal-close">Cancel</button>
+                <button type="submit" class="btn btn-primary">Add Debt</button>
+            </div>
+        </form>
+    </div>
+</div>
+
+<!-- Add Todo Modal -->
+<div class="modal" id="todoModal">
+    <div class="modal-content">
+        <div class="modal-header">
+            <h3 class="modal-title">Add New Task</h3>
+            <button class="modal-close">&times;</button>
+        </div>
+        <form id="todoForm">
+            <div class="form-group">
+                <label class="form-label">Task Description</label>
+                <input type="text" class="form-control" placeholder="What needs to be done?" required>
+            </div>
+            <div class="form-group">
+                <label class="form-label">Due Date</label>
+                <input type="date" class="form-control">
+            </div>
+            <div class="form-group">
+                <label class="form-label">Priority</label>
+                <select class="form-control">
+                    <option value="low">Low</option>
+                    <option value="medium" selected>Medium</option>
+                    <option value="high">High</option>
+                </select>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn modal-close">Cancel</button>
+                <button type="submit" class="btn btn-primary">Add Task</button>
+            </div>
+        </form>
+    </div>
+</div>
+
+<!-- JavaScript -->
+<script src="/js/script.js"></script>
+</body>
+</html>
