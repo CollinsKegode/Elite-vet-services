@@ -1,0 +1,148 @@
+<%- include('partials/header', {
+    title: 'Dashboard',
+    currentPage: 'dashboard'
+}) %>
+
+<div class="page-content active dashboard-page">
+    <!-- Dashboard Cards -->
+    <div class="dashboard-cards">
+        <% if (cards && cards.length) { %>
+            <% cards.forEach((card, index) => { %>
+                <div class="card fade-in delay-<%= index + 1 %>">
+                    <div class="card-header">
+                        <div>
+                            <div class="card-value"><%= card.value %></div>
+                            <div class="card-title"><%= card.title %></div>
+                        </div>
+                        <div class="card-icon <%= card.type %>">
+                            <i class="<%= card.icon %>"></i>
+                        </div>
+                    </div>
+                </div>
+            <% }); %>
+        <% } else { %>
+            <p class="no-cards-message">No dashboard cards available</p>
+        <% } %>
+    </div>
+
+    <!-- Recent Appointments Section -->
+    <div class="section fade-in" style="animation-delay: 0.5s;">
+        <div class="section-header">
+            <h3 class="section-title">Today's Appointments</h3>
+            <button class="btn btn-primary btn-sm" id="addAppointmentBtn">
+                <i class="fas fa-plus"></i> <span>Add Appointment</span>
+            </button>
+        </div>
+        <% if (appointments && appointments.length) { %>
+            <div class="table-responsive">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Time</th>
+                            <th>Patient</th>
+                            <th>Owner</th>
+                            <th>Reason</th>
+                            <th>Status</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <% appointments.forEach(appointment => { %>
+                            <tr>
+                                <td><%= appointment.time %></td>
+                                <td><%= appointment.patient %></td>
+                                <td><%= appointment.owner %></td>
+                                <td><%= appointment.reason %></td>
+                                <td>
+                                    <span class="status <%= appointment.statusClass %>">
+                                        <%= appointment.status %>
+                                    </span>
+                                </td>
+                                <td>
+                                    <button class="btn btn-primary btn-sm">
+                                        <i class="fas fa-eye"></i>
+                                    </button>
+                                    <button class="btn btn-primary btn-sm">
+                                        <i class="fas fa-edit"></i>
+                                    </button>
+                                </td>
+                            </tr>
+                        <% }); %>
+                    </tbody>
+                </table>
+            </div>
+        <% } else { %>
+            <p class="no-appointments-message">No appointments scheduled for today</p>
+        <% } %>
+    </div>
+
+    <!-- Recent Payments Section -->
+    <div class="section fade-in" style="animation-delay: 0.6s;">
+        <div class="section-header">
+            <h3 class="section-title">Recent Payments</h3>
+            <button class="btn btn-primary btn-sm" id="addPaymentBtn">
+                <i class="fas fa-plus"></i> <span>Record Payment</span>
+            </button>
+        </div>
+        <% if (payments && payments.length) { %>
+            <div class="table-responsive">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Date</th>
+                            <th>Patient</th>
+                            <th>Owner</th>
+                            <th>Amount</th>
+                            <th>Service</th>
+                            <th>Method</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <% payments.forEach(payment => { %>
+                            <tr>
+                                <td><%= payment.date %></td>
+                                <td><%= payment.patient %></td>
+                                <td><%= payment.owner %></td>
+                                <td><%= payment.amount %></td>
+                                <td><%= payment.service %></td>
+                                <td><%= payment.method %></td>
+                            </tr>
+                        <% }); %>
+                    </tbody>
+                </table>
+            </div>
+        <% } else { %>
+            <p class="no-payments-message">No recent payments found</p>
+        <% } %>
+    </div>
+
+    <!-- To-Do List Section -->
+    <div class="section fade-in" style="animation-delay: 0.8s;">
+        <div class="section-header">
+            <h3 class="section-title">To-Do List</h3>
+            <button class="btn btn-primary btn-sm" id="addTodoBtn">
+                <i class="fas fa-plus"></i> <span>Add Task</span>
+            </button>
+        </div>
+        <% if (todos && todos.length) { %>
+            <ul class="todo-list" id="todoList">
+                <% todos.forEach(todo => { %>
+                    <li class="todo-item">
+                        <input type="checkbox" class="todo-check" <%= todo.completed ? 'checked' : '' %>>
+                        <span class="todo-text <%= todo.completed ? 'completed' : '' %>">
+                            <%= todo.task %>
+                        </span>
+                        <span class="todo-date"><%= todo.dueDate %></span>
+                        <button class="btn btn-primary btn-sm">
+                            <i class="fas fa-trash"></i>
+                        </button>
+                    </li>
+                <% }); %>
+            </ul>
+        <% } else { %>
+            <p class="no-todos-message">No tasks in your to-do list</p>
+        <% } %>
+    </div>
+</div>
+
+<%- include('partials/footer') %>

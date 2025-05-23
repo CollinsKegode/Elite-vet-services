@@ -1,0 +1,64 @@
+<%- include('header'); %>
+
+            <!-- Debts Page -->
+            <div class="page-content active" id="debts-page">
+                <div class="section">
+                    <div class="section-header">
+                        <h3 class="section-title">Outstanding Debts</h3>
+                        <button class="btn btn-primary">
+                            <i class="fas fa-plus"></i> <span>Add Debt</span>
+                        </button>
+                    </div>
+                    <div class="table-responsive">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Patient</th>
+                                    <th>Owner</th>
+                                    <th>Amount</th>
+                                    <th>Due Date</th>
+                                    <th>Status</th>
+                                    <th>Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Max (Dog)</td>
+                                    <td>James Kariuki</td>
+                                    <td>KSh 5,000</td>
+                                    <td>2023-06-20</td>
+                                    <td><span class="status pending">Pending</span></td>
+                                    <td>
+                                        <button class="btn btn-primary btn-sm"><i class="fas fa-money-bill-wave"></i></button>
+                                        <button class="btn btn-primary btn-sm"><i class="fas fa-edit"></i></button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Milo (Cat)</td>
+                                    <td>Susan Wambui</td>
+                                    <td>KSh 3,500</td>
+                                    <td>2023-06-18</td>
+                                    <td><span class="status overdue">Overdue</span></td>
+                                    <td>
+                                        <button class="btn btn-primary btn-sm"><i class="fas fa-money-bill-wave"></i></button>
+                                        <button class="btn btn-primary btn-sm"><i class="fas fa-edit"></i></button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Bella (Dog)</td>
+                                    <td>David Ochieng</td>
+                                    <td>KSh 7,200</td>
+                                    <td>2023-06-25</td>
+                                    <td><span class="status pending">Pending</span></td>
+                                    <td>
+                                        <button class="btn btn-primary btn-sm"><i class="fas fa-money-bill-wave"></i></button>
+                                        <button class="btn btn-primary btn-sm"><i class="fas fa-edit"></i></button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+<%- include('footer'); %>

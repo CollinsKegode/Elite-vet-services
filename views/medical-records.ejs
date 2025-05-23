@@ -1,0 +1,68 @@
+<%- include('header'); %>
+
+            <!-- Medical Records Page -->
+            <div class="page-content active" id="medical-records-page">
+                <div class="section">
+                    <div class="section-header">
+                        <h3 class="section-title">Medical Records</h3>
+                        <button class="btn btn-primary">
+                            <i class="fas fa-plus"></i> <span>Add Record</span>
+                        </button>
+                    </div>
+                    <div class="table-responsive">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Date</th>
+                                    <th>Patient</th>
+                                    <th>Owner</th>
+                                    <th>Diagnosis</th>
+                                    <th>Treatment</th>
+                                    <th>Vet</th>
+                                    <th>Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>2023-06-15</td>
+                                    <td>Simba (Dog)</td>
+                                    <td>John Mwangi</td>
+                                    <td>Rabies Vaccination</td>
+                                    <td>Vaccine administered</td>
+                                    <td>Dr. Kamau</td>
+                                    <td>
+                                        <button class="btn btn-primary btn-sm"><i class="fas fa-eye"></i></button>
+                                        <button class="btn btn-primary btn-sm"><i class="fas fa-edit"></i></button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>2023-06-14</td>
+                                    <td>Whiskers (Cat)</td>
+                                    <td>Mary Atieno</td>
+                                    <td>Routine Check-up</td>
+                                    <td>No issues found</td>
+                                    <td>Dr. Kamau</td>
+                                    <td>
+                                        <button class="btn btn-primary btn-sm"><i class="fas fa-eye"></i></button>
+                                        <button class="btn btn-primary btn-sm"><i class="fas fa-edit"></i></button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>2023-06-13</td>
+                                    <td>Rex (Dog)</td>
+                                    <td>Peter Omondi</td>
+                                    <td>Deworming</td>
+                                    <td>Deworming medication</td>
+                                    <td>Dr. Kamau</td>
+                                    <td>
+                                        <button class="btn btn-primary btn-sm"><i class="fas fa-eye"></i></button>
+                                        <button class="btn btn-primary btn-sm"><i class="fas fa-edit"></i></button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+<%- include('footer'); %>

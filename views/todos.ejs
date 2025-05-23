@@ -1,0 +1,41 @@
+<%- include('header'); %>
+
+            <!-- To-Do List Page -->
+            <div class="page-content active" id="todo-page">
+                <div class="section">
+                    <div class="section-header">
+                        <h3 class="section-title">To-Do List</h3>
+                        <button class="btn btn-primary" id="addTodoBtnPage">
+                            <i class="fas fa-plus"></i> <span>Add Task</span>
+                        </button>
+                    </div>
+                    <ul class="todo-list" id="todoListPage">
+                        <li class="todo-item">
+                            <input type="checkbox" class="todo-check" checked>
+                            <span class="todo-text completed">Order more rabies vaccines</span>
+                            <span class="todo-date">Today</span>
+                            <button class="btn btn-primary btn-sm"><i class="fas fa-trash"></i></button>
+                        </li>
+                        <li class="todo-item">
+                            <input type="checkbox" class="todo-check">
+                            <span class="todo-text">Call Mr. Otieno about Simba's follow-up</span>
+                            <span class="todo-date">Today</span>
+                            <button class="btn btn-primary btn-sm"><i class="fas fa-trash"></i></button>
+                        </li>
+                        <li class="todo-item">
+                            <input type="checkbox" class="todo-check">
+                            <span class="todo-text">Prepare report for county veterinary office</span>
+                            <span class="todo-date">Tomorrow</span>
+                            <button class="btn btn-primary btn-sm"><i class="fas fa-trash"></i></button>
+                        </li>
+                        <li class="todo-item">
+                            <input type="checkbox" class="todo-check">
+                            <span class="todo-text">Review inventory of medications</span>
+                            <span class="todo-date">Tomorrow</span>
+                            <button class="btn btn-primary btn-sm"><i class="fas fa-trash"></i></button>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+<%- include('footer'); %>

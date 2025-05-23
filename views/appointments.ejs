@@ -1,0 +1,68 @@
+<%- include('header'); %>
+
+            <!-- Appointments Page -->
+            <div class="page-content active" id="appointments-page">
+                <div class="section">
+                    <div class="section-header">
+                        <h3 class="section-title">Upcoming Appointments</h3>
+                        <button class="btn btn-primary">
+                            <i class="fas fa-plus"></i> <span>Schedule Appointment</span>
+                        </button>
+                    </div>
+                    <div class="table-responsive">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Date</th>
+                                    <th>Time</th>
+                                    <th>Patient</th>
+                                    <th>Owner</th>
+                                    <th>Reason</th>
+                                    <th>Status</th>
+                                    <th>Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>2023-06-16</td>
+                                    <td>09:00 AM</td>
+                                    <td>Simba (Dog)</td>
+                                    <td>John Mwangi</td>
+                                    <td>Follow-up</td>
+                                    <td><span class="status paid">Confirmed</span></td>
+                                    <td>
+                                        <button class="btn btn-primary btn-sm"><i class="fas fa-eye"></i></button>
+                                        <button class="btn btn-primary btn-sm"><i class="fas fa-edit"></i></button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>2023-06-16</td>
+                                    <td>02:30 PM</td>
+                                    <td>Milo (Cat)</td>
+                                    <td>Susan Wambui</td>
+                                    <td>Vaccination</td>
+                                    <td><span class="status pending">Pending</span></td>
+                                    <td>
+                                        <button class="btn btn-primary btn-sm"><i class="fas fa-eye"></i></button>
+                                        <button class="btn btn-primary btn-sm"><i class="fas fa-edit"></i></button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>2023-06-17</td>
+                                    <td>10:15 AM</td>
+                                    <td>Bella (Dog)</td>
+                                    <td>David Ochieng</td>
+                                    <td>Check-up</td>
+                                    <td><span class="status paid">Confirmed</span></td>
+                                    <td>
+                                        <button class="btn btn-primary btn-sm"><i class="fas fa-eye"></i></button>
+                                        <button class="btn btn-primary btn-sm"><i class="fas fa-edit"></i></button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+<%- include('footer'); %>
