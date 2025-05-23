@@ -1,0 +1,24 @@
+{
+  "name": "vetcare-backend",
+  "version": "1.0.0",
+  "description": "A simple veterinary app",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon app.js"
+  },
+  "keywords": [],
+  "author": "collins",
+  "license": "ISC",
+  "devDependencies": {
+    "nodemon": "^3.1.10"
+  },
+  "dependencies": {
+    "dotenv": "^16.0.0",
+    "ejs": "^3.1.8",
+    "express": "^4.18.2",
+    "express-session": "^1.18.1",
+    "mysql2": "^3.3.3"
+  },
+  "type": "module"
+}
