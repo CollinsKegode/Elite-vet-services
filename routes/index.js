@@ -119,46 +119,6 @@ router.get('/', (req, res) => {
     });
 });
 
-// // Example using MySQL (with mysql2/promise)
-// router.get('/', async (req, res) => {
-//   try {
-//       // Fetch cards data (e.g., from aggregated queries)
-//       const [cards] = await pool.query(`
-//           SELECT 
-//               CONCAT('KSh ', FORMAT(SUM(amount), 0)) AS value,
-//               'Total Payments' AS title,
-//               'payments' AS type,
-//               'fas fa-money-bill-wave' AS icon
-//           FROM payments
-//           WHERE payment_date BETWEEN ? AND ?
-//       `, [startDate, endDate]);
-
-//       // Fetch appointments for today
-//       const [appointments] = await pool.query(`
-//           SELECT 
-//               DATE_FORMAT(appointment_time, '%h:%i %p') AS time,
-//               CONCAT(p.name, ' (', p.species, ')') AS patient,
-//               o.first_name, o.last_name,
-//               a.reason,
-//               a.status,
-//               CASE 
-//                   WHEN a.status = 'confirmed' THEN 'paid'
-//                   ELSE 'pending'
-//               END AS statusClass
-//           FROM appointments a
-//           JOIN patients p ON a.patient_id = p.patient_id
-//           JOIN owners o ON p.owner_id = o.owner_id
-//           WHERE DATE(a.appointment_time) = CURDATE()
-//       `);
-
-//       // Render with database data
-//       res.render('index', { cards, appointments });
-//   } catch (error) {
-//       console.error(error);
-//       res.status(500).send('Server Error');
-//   }
-// });
-
 // Dashboard Route
 router.get('/', (req, res) => {
   // Sample data - replace with database queries later
