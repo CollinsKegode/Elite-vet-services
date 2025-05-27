@@ -6,7 +6,7 @@
 <div class="page-content active dashboard-page">
     <!-- Dashboard Cards -->
     <div class="dashboard-cards">
-        <% if (cards && cards.length) { %>
+        <% if (typeof cards !== 'undefined' && cards.length) { %>
             <% cards.forEach((card, index) => { %>
                 <div class="card fade-in delay-<%= index + 1 %>">
                     <div class="card-header">
@@ -33,7 +33,7 @@
                 <i class="fas fa-plus"></i> <span>Add Appointment</span>
             </button>
         </div>
-        <% if (appointments && appointments.length) { %>
+        <% if (typeof appointments !=='undefined' && appointments.length) { %>
             <div class="table-responsive">
                 <table>
                     <thead>
@@ -84,7 +84,7 @@
                 <i class="fas fa-plus"></i> <span>Record Payment</span>
             </button>
         </div>
-        <% if (payments && payments.length) { %>
+        <% if (typeof payments !== 'undefined' && payments.length) { %>
             <div class="table-responsive">
                 <table>
                     <thead>
@@ -124,7 +124,7 @@
                 <i class="fas fa-plus"></i> <span>Add Task</span>
             </button>
         </div>
-        <% if (todos && todos.length) { %>
+        <% if (typeof todos !== 'undefined' && todos.length) { %>
             <ul class="todo-list" id="todoList">
                 <% todos.forEach(todo => { %>
                     <li class="todo-item">
